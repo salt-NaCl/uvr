@@ -10,7 +10,7 @@ from uvr5_pack.utils import _get_name_params,inference
 from uvr5_pack.lib_v5.model_param_init import ModelParameters
 from scipy.io import wavfile
 
-class  _audio_pre_():
+class  audio_pre():
     def __init__(self, model_path,device,is_half):
         self.model_path = model_path
         self.device = device
@@ -45,7 +45,7 @@ class  _audio_pre_():
         self.mp = mp
         self.model = model
 
-    def _path_audio_(self, music_file ,ins_root=None,vocal_root=None):
+    def path_audio(self, music_file ,ins_root=None,vocal_root=None):
         if(ins_root is None and vocal_root is None):return "No save root."
         name=os.path.basename(music_file)
         if(ins_root is not None):os.makedirs(ins_root, exist_ok=True)
@@ -102,7 +102,7 @@ if __name__ == '__main__':
     device = 'cuda'
     is_half=True
     model_path='uvr5_weights/2_HP-UVR.pth'
-    pre_fun = _audio_pre_(model_path=model_path,device=device,is_half=True)
+    pre_fun = audio_pre(model_path=model_path,device=device,is_half=True)
     audio_path = 'audio.aac'
     save_path = 'opt'
-    pre_fun._path_audio_(audio_path , save_path,save_path)
+    pre_fun.path_audio(audio_path , save_path,save_path)
