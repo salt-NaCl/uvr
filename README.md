@@ -1,4 +1,4 @@
-# Ultimate Vocal Remover CLI
+# Ultimate Vocal Remover
 
 [[Colab]](https://colab.research.google.com/drive/1VDncdndceKanFrs2LU-LM4Odv8tnPkzD?usp=sharing)
 
@@ -25,8 +25,6 @@ pip install -r requirements.txt
 ```shell
 python separate.py
 ```
-
-[Modify these lines to fit your needs](https://github.com/seanghay/uvr/blob/fa19a9821d42586883202623936a0c8b895ae047/separate.py#L101-L108)
 
 ```python 
 if __name__ == '__main__':
